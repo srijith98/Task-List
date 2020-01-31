@@ -160,13 +160,7 @@ function loadTasks(e)
 function removeTaskFromLS(taskElement)
 {
     
-    let tasks;
-    if(localStorage.getItem('tasks') === null)
-        tasks = [];
-    else
-    {
-        tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
 
     tasks.forEach(function(task, index){
         if(task === taskElement.textContent){
